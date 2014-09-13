@@ -1,6 +1,19 @@
 source 'https://rubygems.org'
 
 
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+gem 'refills'
+gem 'devise'
+gem 'cancancan'
+gem 'paperclip'
+gem 'redcarpet'
+gem 'sanitize'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'rails_12factor'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
 # Use postgresql as the database for Active Record
