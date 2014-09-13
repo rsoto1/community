@@ -1,14 +1,43 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$primary: forestgreen; 
+$othercolor: steelblue; 
+
 
 h1 {
 	font-family: sans-serif;
 	font-size: 3em;
+	text-align: center;
+	color: complement($primary);
 }
 
 p, ul, li, div {
-
+	font-variant: small-caps;
 	font-family: serif; 
 }
 
+p {
+	text-align: center;
+	background-color: $othercolor;
+}
+
+.faqul {
+	background-color: $primary;
+	text-decoration: none;
+	list-style: none; 
+	color: whitesmoke;
+	p strong em{
+		padding-left: 1em;
+	}
+}
+
+
+// <% if current_user %>
+// <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> | 
+// <%= link_to 'Users', users_path %> | 
+// <%= link_to 'Posts', posts_path %>
+// <% else %>
+// <%= link_to 'Login', sign_in_path %> | 
+// <%= link_to 'Sign Up', sign_up_path %>
+// <% end %>
