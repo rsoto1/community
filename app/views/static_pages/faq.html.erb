@@ -23,5 +23,5 @@
 </ul>
 
 <div class="timenow">
-<span>The date/time now is: <%= Time.now.to_s %></span>
+<span>The date/time now is: <%= Time.now.in_time_zone("Mountain Time (US & Canada)") %></span>
 </div>
