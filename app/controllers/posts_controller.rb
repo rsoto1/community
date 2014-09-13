@@ -11,6 +11,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.author = current_user.name
     if @post.save
     	redirect_to @post
   	else
@@ -28,7 +29,7 @@ class PostsController < ApplicationController
 
     def update 
     @post = Post.find(params[:id])
-
+    @post.author = current_user.name
       if @post.update(post_params)
         redirect_to @post
       else
