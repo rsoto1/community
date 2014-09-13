@@ -15,6 +15,24 @@
  */
 
 
+table {
+	width: 45%;
+	display: block;
+	margin: auto;
+	vertical-align: middle;
+	font-family: 'Yanone Kaffeesatz';
+	font-size: 2em;
+	font-variant: small-caps;
+	letter-spacing: .2em;
+}
+
+a {
+	color: orangered;
+	letter-spacing: .125em;
+}
+
+/* table stylez ^ */
+
 
 html {
 	height: 100%;

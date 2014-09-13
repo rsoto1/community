@@ -1,3 +1,55 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$primary: forestgreen; 
+$othercolor: steelblue; 
+$fontmain: 'Yanone Kaffeesatz';
+$fontsecond: 'Roboto';
+
+
+a {
+	color: complement($othercolor);
+	:visited {
+		color: complement($othercolor);
+	}
+
+}
+
+
+
+h1 {
+	font-family: $fontsecond, sans-serif;
+	font-size: 3em;
+	text-align: center;
+	color: complement($primary);
+}
+
+
+
+li strong {
+	text-decoration: underline;
+	color: complement($othercolor)
+}
+
+p, ul, li, div {
+	font-variant: small-caps;
+	font-family: $fontmain, serif;
+	letter-spacing: .125em;
+	font-size: 1em; 
+}
+
+
+
+ul {
+	margin: 1em;
+	padding: .5em;
+}
+
+p {
+	text-align: center;
+	background-color: $othercolor;
+}
+
