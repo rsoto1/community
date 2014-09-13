@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
   devise_scope :user do
     get '/sign_up', to: 'devise/registrations#new', as: :sign_up
     get '/sign_in', to: 'devise/sessions#new', as: :sign_in
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   root 'static_pages#home'
-  resources :users 
+  resources :users, :only => [:show, :index]
   resources :posts do
     resources :comments
   end
