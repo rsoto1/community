@@ -2,23 +2,10 @@
 
 <%= link_to 'New Posts', new_post_path %>
  
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Author</th>
-     <th>Body</th>
-    <th colspan="2"></th>
-  </tr>
- 
 <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.author %></td>
-    <td><%= post.body %></td>
-    <td><%= link_to 'Show', post_path(post) %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post_path(post),
-                     method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<p>
+<%= link_to post.title, post_path(post) %><br>
+Posted by: <%= post.author %>
+<hr>
+</p>
 <% end %>
-</table>
