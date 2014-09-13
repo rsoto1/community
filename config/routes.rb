@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   root 'static_pages#home'
-  resources :users
+  resources :users 
+  resources :posts do
+    resources :comments
+  end
+  
 
   get 'static_pages/faq'
   get 'static_pages/general_info'
