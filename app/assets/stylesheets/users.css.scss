@@ -1,3 +1,38 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$primary: forestgreen; 
+$othercolor: steelblue; 
+$fontmain: 'Yanone Kaffeesatz';
+$fontsecond: 'Roboto';
+
+/* FORM STYLEZ */
+
+ h2 {
+	font-family: $fontsecond, sans-serif;
+	font-size: 3em;
+	text-align: center;
+	color: complement($primary);
+	margin: auto;
+	padding-top: 3em;
+}
+
+
+form {
+	width: 45%;
+	display: block;
+	margin: auto;
+	vertical-align: middle;
+	padding: 3em;
+	font-family: $fontmain;
+	font-variant: small-caps;
+	color: $primary;
+}
+
+input :focus {
+	background-color: yellow;
+}
+
+
+/* END FORM STYLZ */

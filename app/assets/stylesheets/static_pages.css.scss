@@ -3,18 +3,55 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $primary: forestgreen; 
 $othercolor: steelblue; 
+$fontmain: 'Yanone Kaffeesatz';
+$fontsecond: 'Roboto';
+
+
+a {
+	color: complement($othercolor);
+	:visited {
+		color: complement($othercolor);
+	}
+
+}
+
 
 
 h1 {
-	font-family: sans-serif;
+	font-family: $fontsecond, sans-serif;
 	font-size: 3em;
 	text-align: center;
 	color: complement($primary);
 }
 
+.intro {
+	font-size: 2em;
+	padding: 1em;
+	margin: 1em;
+}
+
+li strong {
+	text-decoration: underline;
+	color: complement($othercolor)
+}
+
 p, ul, li, div {
 	font-variant: small-caps;
-	font-family: serif; 
+	font-family: $fontmain, serif;
+	letter-spacing: .125em;
+	font-size: 1em; 
+}
+
+.pics {
+	width: 45%;
+	display: block;
+	margin: auto;
+	vertical-align: middle;
+}
+
+ul {
+	margin: 1em;
+	padding: .5em;
 }
 
 p {
@@ -22,7 +59,7 @@ p {
 	background-color: $othercolor;
 }
 
-.faqul {
+.faqul, .geninfoul, .homeinfoul {
 	background-color: $primary;
 	text-decoration: none;
 	list-style: none; 
@@ -32,12 +69,14 @@ p {
 	}
 }
 
+.homeinfoul {
+	text-decoration: underline;
+	line-height: 2em;
+	list-style-type: square;
+	list-style: outside;
+}
 
-// <% if current_user %>
-// <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> | 
-// <%= link_to 'Users', users_path %> | 
-// <%= link_to 'Posts', posts_path %>
-// <% else %>
-// <%= link_to 'Login', sign_in_path %> | 
-// <%= link_to 'Sign Up', sign_up_path %>
-// <% end %>
+.timenow {
+	text-align: center;
+	letter-spacing: .125em;
+}
